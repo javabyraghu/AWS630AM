@@ -1,0 +1,30 @@
+
+Date : 06-07-2023
+AWS Cloud
+Mr. RAGHU(AshokIT)
+-------------------
+javabyraghu @gmail.com
+For Enquiry -  +91 9985396677
+
+Duration : 2 months
+1hr 30 Min
+AWS + Terraform
+Recordings
+
+
+
+Cloud Computing: PAY PER USE/ OnDemand Computing Resource allocation
+
+Why? No Maintain , Less Cost, Fast service.
+What is the use? To run apps/ to store our data.
+
+Deployment Modes:
+Public
+Private
+Hybrid
+Community
+
+Infrastructure as a Service (IaaS) --> Hardware (Networks/CPU/RAM/Storage)
+Platform as a Service (PaaS)  --> OS
+Software as a Service (SaaS)  --> Ready to use Software
+			(online editors/white board/Gdrive)
