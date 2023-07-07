@@ -1,0 +1,15 @@
+
+
+Date : 07-07-2023
+AWS Cloud
+Mr. RAGHU (AshokIT)
+-------------------
+Virtualization: 
+1. Create multiple VMs (Virtual Computers)
+2. Isolated, Abstraction
+3. Supports networking
+4. Required on s/w : hypervisor 
+5. Install any OS - Machine Image (OS S/w ISO)
+
+*) All Cloud Providers (AWS, GCP, AZURE..etc) are using Virtualization.
+------------------------------------------------------------------------
