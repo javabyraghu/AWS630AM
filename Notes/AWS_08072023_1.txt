@@ -1,0 +1,38 @@
+
+
+javabyraghu @gmail.com
+Ph: +91 9985396677
+
+
+Date : 08-07-2023
+AWS Cloud
+Mr. RAGHU (AshokIT)
+-------------------
+Linux Machine / Windows Server / Mac Machine
+
+*)To Run Applications (Java apps/Pythons ..etc)
+*) Servers are configured and apps are deployed.
+
+1. EC2 is a VM (Virtual Machine)
+2. EC2 connected with concepts like
+	a.  Compute	: vCPU, RAM
+	b.  Storage	: EBS (Elastic Block Store)
+	c.  Network	: VPC - Virtual Private Cloud	
+	d.  OS Template	: AMI - Amazon Machine Image
+	e.  Firewall	: Security Groups(Inbound/Outbound)
+
+3. IP Address
+ex: 192.168.10.12 ( A unique number give to a machine in a n/w)
+a. Private IP (With in Network /VPC)
+b. Public IP (Outside world) [If we stop and start then new Public IP is assigned]
+c. Elastic IP (Fixed/Static IP for your machine).
+
+---------------------------------------------------------------
+Q) I have re-started my EC2 Instane.
+   Does my instance get a new Public IP?
+   [not using any elastic IP concept]
+A) No. Your Public IP Remains same.
+
+
+Ref:
+https://aws.amazon.com/ec2/instance-types/
