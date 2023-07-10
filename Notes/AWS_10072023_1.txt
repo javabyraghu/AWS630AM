@@ -1,0 +1,40 @@
+
+Date : 10-07-2023
+AWS Cloud
+Mr. RAGHU (AshokIT)
+-------------------
+Full Doc for EC2:
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html
+
+EC2 used for creating instances/vm/v-servers.
+(Linux Server, Windows Server, MAC Server).
+Run your apps - 24x7
+====================================
+1. AMI = Amazon Machine Image (Select OS -- Linux, Mac, Windows)
+2. Instance Type -- (select vCPUs, RAM)
+3. Storage  -- (Select SSD. Linux - 8GB, Windows - 30GB)
+   -- EBS : Elastic Block Store (SSD)
+4. Network  -- (Select ie called VPC - Virtual Private Cloud)
+5. Security Group -- (Firewall , Rules to allow/not allow)
+    -- SSH (Secure Shell for Linux) Port : 22 (Fixed Port)
+6. KeyPair  -- [Public + Private Key (.pem)]
+
+*) Client S/w : MobaXTerm/Putty : Connecting a machine in remote.
+
+
+Instance Types:
+https://aws.amazon.com/ec2/instance-types/
+
+URL for Login:
+https://aws.amazon.com/console/
+
+Note:
+-> If we reboot our EC2 Instance Public IP wont be changed.
+-> If we stop/start our EC2 Instance Public IP will be changed.
+-> If we terminate our Instance, AWS will delete our EC2 instance.
+
+Task:
+*) Create a new EC2 Instance, try to connect and terminate that.
+================================================================
+1vCPU in AWS = 1 Core - 1 operation/1 thread.
+Fixed Public IP (even we stop and start)--Elastic IP
