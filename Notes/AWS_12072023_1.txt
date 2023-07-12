@@ -1,0 +1,60 @@
+
+
+Date : 12-07-2023
+AWS Cloud
+Mr. Raghu (AshokIT)
+---------------------
+To create EC2 Instance
+=> Instance type
+=> AMI
+=> EBS
+=> KeyPair
+=> VPC + SG
+
+.pem = Privacy Enhanced Mail.
+=================================
+Security Group:
+1. Firewall / Contains all rules (What is allowed / not allowed)
+2. Inbound Rules (all are disabled by default)
+	Protocol  -- Port -- <From Where they can access>
+	 HTTP         80          Every one (0.0.0.0)
+
+3. Outbound Rules (all are enabled by default)
+4. One SG can be used for Multiple Instances.
+5. They are free to create and use.
+
+ex: better to use one SG for same type/group of instances.
+web_servers_sg
+db_servers_sg
+
+6. We can create SG while creating EC2 or before EC2 creation.
+7. AWS provides on default SG. Default security groups cannot be deleted.
+
+8. If a SG is connected with any Instances then it can not be deleted.
+   Even if Instances are deleted, then SG is not deleted by default.
+   You have to delete if you want.
+
+Q) Can we change on EC2 Instance SG? (After creating EC2 Instance).
+
+
+
+DNS: ec2-43-204-103-61.ap-south-1.compute.amazonaws.com
+user: Administrator
+Pass: ND52bEbw28HTaQ0-F9aTkzTRJq!;HQrz
+----------------------------------------------------------
+Q1) Can we create EC2 Instance without any SG?
+Q2) Can we modify SG of an EC2 Instance after creating it?
+Q3) What will happen to SG if we delete EC2 Instance?
+Q4) What are porotocols and Port numbers
+   need to be open for Linux/Windows in SG ?
+Q5) Can we edit SG? 
+Q6) Give some example Protocols and Port Numbers?
+  HTTP, HTTPS, SMTP, FTP, AllTCP.
+Q7) What is mean by Custom in SG?
+Q8) Can we add two or more SGs to one EC2 Instance?
+Q9) What are options(locations) allowed for a Port Opening?
+Q10) Can we use one SG for 4 EC2 Instances?
+Q11) Is AWS providing any SG ? 
+Q12) Can we delete a SG if it is attached to EC2 Instance?
+Q13) Can we delete default SG given by AWS?
+Q14) How can we create new SG from existed one?(Copy??)
