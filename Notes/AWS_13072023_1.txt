@@ -1,0 +1,31 @@
+
+
+Date : 13-07-2023
+AWS Cloud
+Mr. RAGHU (AshokIT)
+-------------------
+EC2, Linux, Windows, SG, 
+Port Open(SSH/22, RDP/3389), AMI, Vol(8GB, 30GB).
+
+IP : Internet Protocol.
+
+Q) What is stop and stop an EC2 Instance, is Public IP being fixed?
+A) If we stop and start, A new Public IP is assigned.
+
+Fixed PubliIP : Elastic IP (AWS)
+
+Note:
+An Elastic IP address is for use in a specific Region only, and cannot be moved to a different Region.
+
+Mumbai - Elastic IP ---> not access -> in HYD 
+
+Elastic IP
+1. Allocate Elastic IP	   : AWS Creates one Elastic IP and given to Your Account
+2. Associate Elastic IP	   : Link Elastic IP with EC2 Instance	
+3. Disassociate Elastic IP : Remove Link of Elastic IP with EC2 Instance	
+4. Release Elastic IP	   : Give Elastic IP back to AWS Team.
+
+By default, all AWS accounts are limited to 5 Elastic IP addresses per Region
+
+If a Elastic IP is Associated with EC2 Instance, we will not get charged.
+Only Allocated and Not Associated Elastic IPs are charged.
