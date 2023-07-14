@@ -1,0 +1,49 @@
+
+
+Date : 14-07-2023
+AWS Cloud
+Mr. Raghu (AshokIT)
+---------------------
+Load / Load Factor (Words Related to Dev)
+
+Load : Current no.of requests (request count)
+Load Factor = Cureent Load / Max Load = 20 / 100 = 0.2
+
+*) High availability : Run Apps/Services/Containers in Multiple availability Zones
+*) Scalability: Creating multiple Instances of same type Service.
+
+
+Step#1 Create 3 EC2 Instances
+While Creating EC2 Instance Please copy and paste "User Data"
+in Advanced Secction
+
+-> Please test them (working status)
+-> Just copy Public IP of Each Instance and Paste in Browser.
+
+
+Step#2 Create one Target Group
+Create a TG and Add Above EC2 Instances which are running WebServers.
+
+Step#3 Create one ALB (ELB) using Above TG.
+(Wait 1/2 mins)
+
+
+Step#4 Test DNS Name (URL)
+
+Step#5**** Delete all Resources ( ALB, TG and Instances) once Testing is done.
+
+
+Task:
+Q1) What is Load and LoadFactor?
+Q2) What is the difference TargetGroup and LoadBalancer?
+Q3) What is DNS URL?
+Q4) What are different types of LoadBalancers supported by AWS?
+Q5) What is Health Check? Where can we check?
+Q6) Which Algorithm is used by ELB?
+Q7) What is EC2 User Data ? How can we provide?
+Q8) Explain below words?
+  a. Webserver
+  b. Request/Response
+  c. Network Traffic
+  d. High Availability
+  e. Scaling
