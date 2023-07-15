@@ -1,0 +1,30 @@
+
+
+Date : 15-07-2023
+AWS Cloud
+Mr. Raghu (ASHOKIT)
+-------------------
+Working with LoadBalancer.
+Step#1 Created instances manually
+Step#2 Create one Target Group
+Step#3 Create LoadBalancer using Target Group.
+
+-----------------------------------------
+ASG (Auto Scaling Group):
+ It is used to manage no.of EC2 Instances based on Network Traffic
+ (Resource Usage ie CPU Usage > 50%)
+ We need to provide limits (min, max and desired)
+ We need to configure Launch Template (Details for creating new EC2 Instance)
+ Like AMI(OS), CPUs, Volume, Network, SG, KeyPair, Userdata..etc
+ 
+ASG even needs/creates LB and TG.
+
+https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-auto-scaling-groups-launch-template.html
+
+AWS has given Mumbai Region with 3 AZe(ap-south-1a,ap-south-1b,ap-south-1c)
+Launching a new EC2 instance. 
+Status Reason: Your requested instance type (t2.micro)
+is not supported in your requested Availability Zone (ap-south-1c)
+
+At last Delete ASG, LB and TG.
+-----------------------------------------------------------------
