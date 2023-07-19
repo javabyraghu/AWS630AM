@@ -1,0 +1,26 @@
+
+Date : 19-07-2023
+AWS Cloud
+Mr. RAGHU (AshokIT)
+--------------------
+EC2 Instances
+-> AMI (OS Template)
+-> Network (VPC + SG)
+-> Volumes (Storage and Backups)
+-> keyPair (Pub/Priv)
+-> LoadBalancers(TG/LB/ASG)
+--------------------------------------------------------------------
+=> EC2 instance is a Region/AZe Specific.
+=> With every EC2 Instance a volume is created and attached ie called as
+  Root Volume.
+=> Root Volume contains OS + our files.
+=> Min Root Vol size is 8GiB (Linux), 100GiB(MAC), 30GiB (Windows).
+=> Max Vol size for EBS: 16 TiB (16384 GiB)
+=> Volumes creation, resize, deletion is done using EBS (Elastic Block Store)
+=> EC2 Root vol is deleted on Termination of EC2 (default)
+
+Task:
+Q) What is Mount and Unmount? Write Linux Commands for those?
+Q) What is the use of /dev directory in Linux?
+Q) Create EC2 Instance with Root Vol (8Gib), that should not delete
+   Root Vol if we Terminate EC2 Instance.
