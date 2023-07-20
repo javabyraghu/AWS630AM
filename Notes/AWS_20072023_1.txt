@@ -1,0 +1,24 @@
+
+Date : 20-07-2023
+AWS Cloud
+Mr. Raghu (ASHOKIT)
+--------------------
+EBS types:
+1. General Purpose : 
+ Webservers, Bash Operations, jenkins, Nexus,..DevOps Tools
+2. Provisioned IOPS:
+ Good performance, Large Data, bit high cost.
+
+3.Throughput Optimized : 
+  low cost, large data processing, bit slow in processing
+4. Cold HDD: low cost, very less used data.
+5. Magnetic: old generation.
+=====================================================================
+EBS Additional Volume:
+1. Create
+2. Attach: Make sure EC2 Instance and Vol must be in Same AZe.
+	ex: ap-south-1a
+3. Mount: Link with Root Vol (use any one new directory)
+4. Use/Create files
+5. Unmount
+6. Detach
