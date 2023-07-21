@@ -1,0 +1,20 @@
+
+
+Date : 21-07-2023
+AWS Cloud
+Mr. Raghu (ASHOKIT)
+------------------------
+In case, (if we are not using Free Tier Account, then)
+EC2 instance is created with Root Volume, then
+bill is generated for both EC2 Instance type and Root Volume.
+Calculated based on Min for EC2 Running state and Vol size for EBS.
+
+Q) Even I have a stopped EC2 Instance (non- Free AWS Account).
+   But still I'm getting Bill. Why?
+A)
+
+==========================================================================
+Snapshots: EBS Backups
+
+Volume(EBS) ---> Snapshot 
+Snapshot    ---> Volume (EBS)
