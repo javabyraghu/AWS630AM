@@ -1,0 +1,17 @@
+
+
+Date : 22-07-2023
+AWS Cloud
+Mr. RAGHU (AshokIT)
+---------------------
+Q) Can we attach one volume to multiple EC2 instances?
+   No. We can attach only one EBS Vol to one Instance at a time.
+   But, If it is IOPS (io2) volume then we can attach to multiple instances,
+   otherwise we can't attach
+   It is better to use EFS for Shared File System for multiple Instances.
+--------------------
+(Manual work)MySQL Database 
+1. EC2 Instance + EBS Vol
+2. Install MySQL
+3. Setups/ configure (Database name, username, password, ..etc) 
+4. provide it to team
