@@ -1,0 +1,41 @@
+
+
+Date: 24-07-2023
+AWS Cloud
+Mr. Raghu (AshokIT)
+---------------------
+AWS RDS: 
+-> Database : Storage data using Tables.
+-> Ex: MySQL, Oracle, Postgress, ..etc
+-> Frontend app connects with backend app,
+   backend app connects with Database.
+-> AWS RDS is a Managed Service 
+(AWS will download, install, backup,destroy)
+
+*) We need to do configuration.
+*) Two types in AWS : Production (Endcustomers data)
+	Dev/Test DB (App Testing purpose)
+*) RDS backups are stored in S3.
+
+Endpoint: ashokitdb.cymzfbi6tout.ap-south-1.rds.amazonaws.com
+DB: ashokitdb
+un: admin
+Pwd: Root9876
+
+use ashokitdb;
+create table course(cid int, cname varchar(20), cfee double);
+insert into course values(10,'SBMS',200.0);
+insert into course values(11,'Angular',100.0);
+insert into course values(12,'AWS',100.0);
+insert into course values(13,'DevOps',150.0);
+
+Amazon Linux 2023:
+sudo yum install mariadb105-3:10.5.16-1.amzn2023.0.7.x86_64
+
+Connect using:
+mysql -h ashokitdb.cymzfbi6tout.ap-south-1.rds.amazonaws.com -u admin -p
+MySQL > show databases;
+MySQL > use ashokitdb;
+MySQL > show tables;
+MySQL > select * from course;
+exit
