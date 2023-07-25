@@ -1,0 +1,28 @@
+
+Date : 25-07-2023
+AWS Cloud
+Mr. Raghu (AshokIT)
+---------------------
+AWS S3 : Simple Storage Service
+
+-> Object Storage : Uploads/Downloads
+	Images, Docs, Sheets, PDF, Video, Audio ..etc
+-> We need to create buckets in S3
+-> Names must be unique in Global
+-> Every file is a Object.
+-> No size limit for S3.
+-> It stores file data, metadata(filename,size, ..etc) and UniqueId
+-> Provide Security (Public Access, Private Access, WebBased Access)
+-> Used for Files(upload/Download), Store backups, Logs, Static webhosting.
+-> Supports even versioning (v1, v2)
+-> we can stores files and folders (but taken as files only)
+
+URL:
+http:// <BucketName> .s3.amazonaws.com/<folderName>/<fileName>.<ext>
+ex:
+http://bank123App.s3.amazonaws.com/images/data.png
+
+s3://raghu-test-2023-abc/assets/css/bootstrap.css
+
+-> We can delete only Empty Buckets.
+(Buckets must be empty before they can be deleted)
