@@ -1,0 +1,49 @@
+
+
+Date : 26-07-2023
+AWS Cloud
+Mr. Raghu (AshokIT)
+--------------------
+Website: Collection of Webpages.
+ex Webpages: Login, Register, Inbox, Hotels ..etc
+
+
+Types of Webpages:
+1. Static WebPage -- Page content is same always 
+		(for any User/location/time)
+ex: Login Page, Register Page, Aboutus, ..etc
+
+*) Static Webpage is created using HTML (CSS,JS)..etc
+
+2. Dynamic WebPage -- Page content is dynamic always.
+
+ex: Facebook Profile page, News Website, Bank Applications..etc
+
+*) Dynamic Webpages -- HTML + Programming Language (Java Servlets, .net MVC ..etc)
+-------------------------------------------------------
+*) S3 supports hosting(Running) Static Website.
+
+Ex:
+http://my-static-web-hosting-test-2023.s3-website.ap-south-1.amazonaws.com/
+
+-> By default all Objects in Bucket are private.
+   [We can not access outside of VPC]
+-> To make it public/private -- use ACL(Access Control List)
+   First, we need to enable this.
+   Next, We need to make public.
+===================================================================
+Enable S3 Versioning.
+
+V1 -- details.txt -- 7:00AM -5 lines -- AWS S3
+V2 -- details.txt -- 7:02AM -6 lines -- AWS S3
+V3 -- details.txt -- 7:10AM -8 lines -- AWS S3 -- latest one is stored always.
+
+
+https://test-ver-raghu-2023.s3.ap-south-1.amazonaws.com/message.txt
+? versionId = HFKWEIDseR7dYPJYgNCj_2axXoLzwuiA
+
+Enabled Version
+File1 -V1,V2,V3
+
+Suspend Version
+File2 - 3 times (last one is present)
