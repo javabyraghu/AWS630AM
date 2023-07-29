@@ -1,0 +1,45 @@
+
+
+Date : 29-07-2023
+AWS Cloud
+Mr. RAGHU (AshokIT)
+------------------------------
+S3 : Storage / Object / Upload / Download / Versioning
+
+How you Acess ? frequently / fast download
+Where you store? Multi-Zone / One-Zone
+What format? Regular / Compressed. -- Slow download
+
+Q) Want to Store 3 years back logs data in S3.
+   Which Storage class is recomanded?
+   [Slow Download also fine]
+A) 
+
+   [Avg Download speed is recomanded]
+A) 
+	
+
+Q) Which Storage class in S3, stores in single AZe?
+A) 
+
+-------------------------------------------------------------------
+Q) What are Policies allocated to a new User in IAM? (by default)
+A) 
+
+Q) Why should we create User Group and add User to a Group?
+A)
+ 
+Q) Why Roles in IAM?
+A)
+
+Q) What is mean by Policies in IAM?
+A)
+ 
+Q) What are the use-cases to create a User in IAM?
+A)
+
+un: sampleabc
+pwd: TestAbc@50
+
+https://shettyraghu.signin.aws.amazon.com/console
+

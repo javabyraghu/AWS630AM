@@ -1,0 +1,15 @@
+
+
+Date : 28-07-2023
+AWS Cloud
+Mr. Raghu (AshokIT)
+----------------------
+Based on Cost-Management concept, choose a storage class.
+Price is diff.
+
+Standard,
+OneZone
+Glacier
+
+Cost is diff
+based on time, size and download speed.
