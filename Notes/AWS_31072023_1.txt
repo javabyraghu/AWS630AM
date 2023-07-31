@@ -1,0 +1,45 @@
+
+
+Date : 31-07-2023
+AWS Cloud
+Mr. RAGHU (AshokIT)
+-----------------------------
+-> IAM service is FREE.
+-> If an IAM user creates any Resources (like EC2, S3, EBS, RDS ..etc)
+  then those are billable.
+
+Note:
+1. New AWS Accout --> Email/Pwd .... --> root Account.
+2. Acc gets AccId Ex: 54789333412
+3. Never directly work with Root Account in Orgs.
+4. Always Create IAM with least privilege (only What they want).
+5. If we choose checkbox "Users must create a new password at next sign-in"
+   then user gets IAM Policy --> IAMUserChangePassword
+
+What are use cases to create a User in AWS?
+User --> 1. Console Login(open browser..do task)
+	 2. CLI Access (Command Line)
+	 3. SDK Access (Programming Access)
+SDK / APIs --> Software Development Kit / Application Programming Interface
+
+6. For every IAM user, we need to share
+URL: https://shettyraghu.signin.aws.amazon.com/console
+     https://088002525318.signin.aws.amazon.com/console
+Un:  sam
+Pwd: Test@1234
+
+7. Policies are JSON Documents
+Ex:
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "___",     //What can we do (Create,Edit,Delete..etc)
+            "Resource": "___"    //What can we use (EC2, RDS, IAM..etc)
+        }
+    ]
+}
+
+8. We can create Custom Policies by selecting required existed policies.
