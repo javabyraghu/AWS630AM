@@ -1,0 +1,27 @@
+
+
+Date : 02-08-2023
+AWS Cloud
+Mr. Raghu (ASHOKIT)
+--------------------
+IAM
+[Admin Approch]
+-> To Access AWS Console
+
+[Programatic Approch]
+-> To Perform operations using AWS CLI. 
+   CLI - Command Line Interface.
+-> SDK (Software Development Kit)
+ Programming Language(Java,Python, ..etc)
+    --> Application ----(AWS SDK)--- AWS Resource(S3,RDS)
+
+aws <service> <command> [options]
+
+Ref:
+https://docs.aws.amazon.com/cli/latest/index.html
+
+Task: (using AWS CLI)
+1. Create one user group (admins) and add some policies.
+2. Create a new User and add to above group
+3. Launch EC2 Instance 
+4. Download(Copy) files from S3 to local machine.
