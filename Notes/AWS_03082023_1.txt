@@ -1,0 +1,50 @@
+
+
+Date : 03-08-2023
+AWS Cloud
+Mr. RAGHU (AshokIT)
+----------------------
+AWS SDK + Java Examples
+
+-> AWS IAM supports generating AccKey/SecKey.
+-> We do Aws Configuration in Machine where we use CLI/SDK.
+-> SDK are used to connect Applications with AWS Resources
+   (RDS,S3,EFS,SQS..etc)
+
+AWS SDK Developer Ref Guide:
+https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/home.html
+
+Java API = Pre-defined (
+	classes + interfaces + enum + annotations + Error/Exceptions)
+
+-> Create A Maven (or similer Project) and add AWS SDK APIs
+Java App -- S3 (Upload/Download/List/Delete)
+
+<dependency>
+    <groupId>software.amazon.awssdk</groupId>
+    <artifactId>s3</artifactId>
+    <version>2.20.117</version>
+</dependency>
+
+Java App -- Sending Email Alters
+
+<dependency>
+    <groupId>software.amazon.awssdk</groupId>
+    <artifactId>ses</artifactId>
+    <version>2.20.117</version>
+</dependency>
+
+Java App -- Database operations
+
+<dependency>
+    <groupId>software.amazon.awssdk</groupId>
+    <artifactId>rds</artifactId>
+    <version>2.20.117</version>
+</dependency>
+
+===============================================================
+Java + maven + AWS SDK (RDS)
+https://github.com/javabyraghu/JavaAwsRdsEx
+
+Java + maven + AWS SDK (S3)
+https://github.com/javabyraghu/JavaAwsS3Ex
