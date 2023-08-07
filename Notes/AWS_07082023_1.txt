@@ -1,0 +1,105 @@
+
+
+Date : 07-08-2023
+AWS Cloud
+Mr. RAGHU (AshokIT)
+----------------------
+AWS IAM
+-> Console based Operations 
+-> CLI (Command Line Interface) Operations
+-> SDK (Software Development Kit)
+   [Applications ---- AWS Resources]
+ex: Bank App (Java) ---- AWS RDS
+
+*) AccessKey, SecretKey are required to work with CLI and SDK.
+
+=================================================
+AWS SDK
+Version - 1 -- com.amazonaws
+
+Ex:
+<dependency>
+    <groupId>com.amazonaws</groupId>
+    <artifactId>aws-java-sdk-s3</artifactId>
+    <version>1.12.523</version>
+</dependency>
+
+
+Version - 2 -- software.amazon.awssdk
+
+Example:
+<dependency>
+    <groupId>software.amazon.awssdk</groupId>
+    <artifactId>s3</artifactId>
+    <version>2.20.120</version>
+</dependency>
+---------------------------------
+Step#1 Create a Maven Project
+Step#2 Update Dependencies
+<dependency>
+	<groupId>software.amazon.awssdk</groupId>
+	<artifactId>rds</artifactId>
+	<version>2.20.117</version>
+</dependency>
+
+[MySQL,Oracle, ..etc]
+
+Step#3 create Region object
+Step#4 Create Client Object for operations
+	client = Region + Credentials(AccKey/SecKey)
+
+s3Client, rdsClient, efsClient, snsClient,..etc
+
+Step#5 Provide details which are related to operations
+ Ex: RDS Creation = un/pwd/Id/DB Class/Memory/Engine..etc
+
+Step#6 View result/ wait after operation execution.
+
+-------------------------------------------------------
+Step#7 Goto RDS (AWS Console) and check Endpoint and Port
+Ex:
+Endpoint
+	raghu-db-instance.cymzfbi6tout.ap-south-1.rds.amazonaws.com
+Port
+	3306
+
+Step#8 Test Connection using MySQL Workbench
+      Create any database schema if required (ex: springdb)
+
+Step#9 Update those detils in application and start coding for Database
+	Operations.
+
+Note: Java Database Operations : JDBC API, Hibernate API, Spring Data JPA
+
+Hibernate with JPA:
+https://github.com/javabyraghu/HibernateWithJPA
+
+Spring Data JPA:
+Full Spring Boot and MS Workspace: https://github.com/javabyraghu/BootWorkSpace6AM
+
+AWS RDS Example:
+https://github.com/javabyraghu/JavaAwsRdsEx
+
+--------------------------------------------------
+mysql -h <host-name> -u <user-name> -p 
+<host-name> => Endpoint
+<user-name> => Username
+Enter password:
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+AWS EFS : Elastic File Storage
+
+-> Shared Storage
+-> Auto-Scale (based on usage)
+-> Support IAM Role
+-> Works on NFS Protocol
+-> NFS uses port 2049
+-> We can connect with multiple EC2 instances.
+
+Q) What is the diff b/w S3, EBS and EFS?
+
+
+==================================================
+Snapshot : creating backup 
+  Database ---> Backup
+Retain Backup : Creating a database from backup
+  Backup --> Database
