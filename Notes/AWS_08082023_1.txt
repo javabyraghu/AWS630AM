@@ -1,0 +1,54 @@
+
+Date: 08-08-2023
+AWS Cloud
+Mr. Raghu (ASHOKIT)
+-------------------
+AWS EFS:
+1. Shared Network Storage 
+2. We can connect multiple EC2 Instances 
+	to share/store common files.
+3. NFS[EFS] Protocol (2049 Port need to be open in SG)
+4. Auto Scaled Memory Management. [EFS Size is dynamic]
+5. Pay per usage (Based on Uploaded content/data exist)
+6. AWS EFS is a Managed Service 
+ (Replicas, Backups/snapshots, LifeCycle Management is automated)
+7. Storage classes:
+	a. Standard : Store data as High Available.
+	b. One Zone : Store data in single AZe.
+	c. Standard IA
+	d. One Zone IA
+8. Security : Role management is used from IAM to connect with EFS.
+ SAM (User/UserGroups [Policies]) ---> AWS Console/CLI/SDK
+ MyRole-1 (Roles [Policies]) --> AWS Resource-1(EC2) --- AWS Resource-2(AWS EFS)
+
+9. AWS EFS : Store only files. 
+	-> Install OS (Not possible)
+	-> Install Apps (Not Possible)
+10. Performance Mode:
+	General Purpose: Regular Operations (Create/Edit/Copy/..etc)
+	Max I/O : Used for complex, lengthy files..etc
+
+--After Creating EFS and EC2 Instances-------
+1. Create a Folder
+$ mkdir mydata
+
+2. Update User permissions
+$ sudo chown -R ec2-user:ec2-user mydata
+
+3. Open NFS Port in Security Group.
+(AWS Console)
+
+4. Install EFS Tools in EC2 (to do mounting)
+$ sudo yum install amazon-efs-utils -y
+
+5. Execute Mount command at EC2
+$ sudo mount -t efs -o tls fs-0b999b4634b25fbd9:/ mydata
+
+6. Create some files / edit if already exist
+
+7. Unmount 
+$ cd ..
+$ sudo umount mydata
+
+8. Before Unmounting try to create 2nd EC2 Instance and try same.
+
