@@ -1,0 +1,52 @@
+
+Date: 11-08-2023
+AWS Cloud
+Mr. Raghu (ASHOKIT)
+------------------
+AWS NoSQL Database : Dynamo DB
+------------------------------
+Database : It is structured form of organized data.
+ex: Bank App ---- data (Customers, Tx, Card ..etc)
+
+Types:
+1. SQL based: We need to Write Queires for operations, like:
+   Insert, Update, Delete and Select.
+
+Ex: Oracle, MySQL, Postgress..etc
+    AWS RDS MySQL
+
+insert into emptab values (1, "A", 200.0);
+insert into emptab values (2, "B", 300.0);
+
+select ename from emptab where esal > 200.0;
+
+
+2. NoSQL Based : No need to define any query for operations.
+   Data even stored in key:val / JSON Formats (Java Script Object Notation)
+
+ex:
+[
+  { eid : 10, ename : "AJAY", esal : 200.0 } ,
+  { eid : 11, ename : "SAM" },    //We can ignore fields which are not required for some records
+  { eid : 12, ename : "DAVE", dept : "QA" } //we can add new fields.
+]
+
+Ex: MongoDB, DynamoDB ..etc
+
+UI Fullstack: MEAN, MERN ... NoSQL Concepts.
+
+https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Using.API.html
+Ref:
+https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/javav2/usecases/creating_first_project
+
+EC2, Servers, DB, EBS, VPC, K-P, ASG, LB ..etc
+
+Index: (Rules: Non-Duplicates, Unique columns)
+user_lastname -- not a  good for index.
+user_email -- good one for index.
+
+scan -- select fileds
+query -- provide conditions
+
+SQL:
+select ename from emptab where esal>10;
