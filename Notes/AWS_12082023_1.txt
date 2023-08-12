@@ -1,0 +1,45 @@
+
+
+Date : 12-08-2023
+AWS Cloud
+Mr. Raghu (AshokIT)
+--------------------
+AWS SQS : Simple Queue Service
+
+-> By using Programming languages, applications can be developed.
+ex: By using java, E-Commerce App is implemented.
+
+-> application = Collection of services/modules.
+Ex: Amazon/Flipkart =
+   Modules [ Search, Cart, Payment, Order, Tracking, Invoice, Feedback]
+
+-> Microservices Design: [Decoupled Architecture]
+   Implement Modules/services in independent way.
+   
+   Search  ----[Queue]----- Cart ------[Queue]----- Payment
+
+---[Queue]----
+=> Queues are used to connect two different applications.
+=> For Asynchronous communication 
+=> for data exchange.
+=> Tool:
+ 1. ActiveMQ
+ 2. Kafka
+ 3. AWS SQS*
+
+https://www.dnsstuff.com/wp-content/uploads/2020/12/image-11.png
+
+Standard:
+-> Data is delivered in any Order.
+-> Data may be delivered multiple times.
+-> Delivery speed is faster.
+
+FIFO:
+-> Data is delivered in sending Order.
+-> Data is delivered exactly only once.
+-> Delivery speed is normal.
+
+Queue URL:
+https://sqs.ap-south-1.amazonaws.com/088002525318/TestMyQueue
+
+=================================================================
