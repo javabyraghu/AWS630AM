@@ -1,0 +1,69 @@
+
+
+Date : 13-08-2023
+AWS Cloud
+Mr. RAGHU (AshokIT)
+--------------------
+AWS VPC (Virutal Private Cloud)
+
+1. Networking : It is a process of connecting one machine with another.
+2. AWS VPC is Networking concept given by AWS Cloud.
+3. Without network (VPC) we can not create any Resource in AWS.
+4. A default VPC is given by AWS Team (one per account).
+
+5. Create a new VPC for your project
+ -> Secure
+ -> Isolate your resources
+ -> Well Ordered
+ -> Resource access using private/public subnets
+
+6. CIDR is required for VPC to generate IP Address.
+Classless Inter-Domain Routing (CIDR) is an IP address allocation method
+  /32 ==> 2 pow (32 - 32) => 2 pow 0 => 1 (IP Address)
+  /31 ==> 2 pow (32 - 31) => 2 pow 1 => 2 (IP Address)
+
+ex: 10.0.0.0 / 16 
+ => IP Address allocated to VPC : 10.0.0.0 - 10.0.255.255
+https://mxtoolbox.com/subnetcalculator.aspx
+
+7. Types of Subnets:
+ A. Public Subnet  : Allow Resources to be accessed by internet.
+ 	-> Connect to IGW (Internet Gateway)
+	ex: Webservers, App Instances, Containers ..etc
+
+ B. Private Subnet : Allow with in VPC (intranet/local)
+ 	-> Connect with only normal network.
+    ex: Databases, Backups, Logs Server, ..etc
+
+Recomanded:
+ 1 Subnet is created in 1 AZe.(ex: ap-south-1b)
+
+8. Security:
+ a. Network ACL (Access Control List) --> Subnet / VPC
+ 	-> What are allowed
+	-> What are not allowed
+	-> Define multiple rules in order
+		Rule - 15 _______
+		Rule - 22 _______
+		...etc
+	-> Recomanded at Network (VPC/Subnets) level.
+ b. Security Group (Specify that what are allowed )
+ 	-> Recomanded at Resource Level (ex: Ec2, RDS)
+
+9. NAT Gateway (Network Address Transilators)
+  Private Subnets can not access internet.
+  If they want to download some data (sudo yum update), it wont work.
+  Then create a NAT in Public Subnet and connect to private Subnet.
+
+========================================================================
+VPC		: Private network given by AWS 
+Subnet		: Small networks with IP ranges (Resource Isolation)
+RouteTable	: Contains CIDR details Local(192.0.0.0/16) and IGW (0.0.0.0/0)
+			1 Route Table ---- 1 Subnet / n -subnets
+
+NAT		: For outbound traffic for private Subnet
+CIDR		: IP Allocation process
+Elastic IP	: Fixed Public IP for a Resource
+Security Group	: for Resource level / What are allowd in
+Network ACL	: For Subnet/VPC level (Allow/Deny)
+VPC Peering	: One VPC to Another VPC connection.
