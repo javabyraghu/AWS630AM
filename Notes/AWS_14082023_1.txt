@@ -1,0 +1,50 @@
+
+
+Date : 14-08-2023
+AWS Cloud
+Mr. Raghu (AshokIT)
+---------------------
+1. AWS has given one default VPC per one Region
+2. Every Default VPC contains one Subnet per one AZe.
+3. All these subnets are connected to one Route Table and one network ACL.
+4. One IGW (internet gateway) is given in default VPC and connected to Route table.
+Hint: 0.0.0.0/0 ==> Means Internet / IGW.
+5. One Security Group is given by default VPC.
+   But it is used as Firewall for Resources created inside Subnet.
+
+6. one Network ACL is created by default VPC that behaves like
+   firewall for subnets (Allow/Deny). This is connected with all subnets.
+
+7. one Route table is given by default VPC and all subnets are connected.
+8. A Physical Router is present, (managed by AWS) connected to Route Table.
+
+9. We can disable - "Auto-assign public IP" in two cases,
+   if a Resource is getting created in a Private Subnet.
+   Communication can be done using private IP (same VPC)
+   If a Resource is getting Elastic IP, then no use of temp public IP.
+
+10. We can have EC2 instance connected to multiple Security Groups.
+    One Security can have multiple Rules.
+
+11. By default every EC2 Instance is created in default VPC.
+    And choosing subnet preferences -- (any)
+-------------------------------------------------------------------------
+Q) What is network? Resources used for Networking?
+Q) What is IP Address ?
+Q) classes in IP Address?
+Q) How many IPs are reserved/used by VPC in AWS?
+Q) What is CIDR? How to calculate?
+
+00000000.00000000.00000000.00000000
+11111111.11111111.11111111.11111111
+
+IP address Range
+0.0.0.0 => 255.255.255.255
+
+Ex:
+192.168.0.1 => 11000000.10101000.00000000.00000001
+
+Note:
+-> Create your own VPC (1 for Project)
+-> Do not repeate CIDRs ( no issue if we repeate CIDRs) for multiple VPCs.
+-> if we try to do peering b/w VPC, they must have different CIDRs.
