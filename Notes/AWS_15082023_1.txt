@@ -1,0 +1,50 @@
+
+
+Date : 15-08-2023
+AWS Cloud
+Mr. Raghu (AshokIT)
+---------------------------------
+CIDR : It is a process of allocating IP address to a network resources.
+*) Classless Inter-Domain Routing (CIDR) is an IP address allocation method
+VPC -- Resources -- EC2 , RDS ..etc -- IP address(start-end / range?)
+
+Use below resources to calculate
+1. https://cidr.xyz/
+2. https://mxtoolbox.com/subnetcalculator.aspx
+
+CIDR Ex: 10.0.0.0/28
+Q) How many IPs are allocated?
+ 32-28 => 4 ---> 2 pow (4) => 16 IP are allocated.
+
+10.0.0.0
+   to
+10.0.0.15
+
+Use Binary to Decimal Calculator.
+https://www.rapidtables.com/convert/number/binary-to-decimal.html
+
+*)  /32 means use only one IP (or one IP is allowed)
+ex: 192.168.10.12/32 means 192.168.10.12
+======================================================================
+*) Every VPC/subnet creation needs CIDR value.
+*) It is good have public Subnet with less IPs range.
+   We do mostly deploy resources in Private Subnet only.
+*) After creating VPC, we can add new CIDR for new IP ranges.
+   [At max 5 CIDRs ]
+
+--Example/Task------------------------
+1. Create VPC
+-> When a new VPC is created, then 
+   it also creates one Route table and Network ACL (Main)
+2. Create Subnets
+3. Create Route Table
+4. Create IGW
+5. Create EC2 Instance in Public Subnet
+ (try to create and connect in Private subnet)
+-------------------------------------
+*) AWS VPC reserves first 4 and last 1 IP address in given CIDR for
+   its internal process.
+*) When ever we create a new subnet, it will be connected with Main
+   Route table, but good process is maintain individual route tables
+    for public/private subnets.
+=====================================================================
