@@ -1,0 +1,123 @@
+
+
+Date : 16-08-2023
+AWS Cloud
+Mr. Raghu (ASHOKIT)
+---------------------------------
+VPC
+Subnets
+Route Tables
+NACL
+SG
+EC2
+IGW
+---------
+VPC Peering Connection:-
+1. We can have multiple VPC with in same region/AWS Accounts,
+   or even in diff  region/AWS Accounts.
+
+2. In this case, two Instances (EC2) in different VPCs can communicate,
+   using internet (PublicIP/Public Network communication).
+  
+3. VPC Peering can be used to create a communication between two VPCs
+   for a private communication.
+
+4. Two VPCs must have different CIDRs for VPC Peering Connection.
+
+--------------------------------------------------------------------
+Q) What  is VPC Peering ?
+A VPC Peering: IPV4 or IPV6 traffic routes between VPCs
+created to establish communication between one or more multiple VPCs.
+
+
+AWS definition: 
+=> “A VPC peering connection is a networking connection between 
+two VPCs that enables you to route traffic between them using 
+private IPv4 addresses or IPv6 addresses.
+
+Instances in either VPC can communicate with each other as if they are within the same network. “
+
+1) Through VPC Peering, traffic stays within the AWS network and not go over the internet.
+
+2) Non-overlapping CIDRs – The 2 VPCs you are trying to peer, must have a mutually exclusive set of IP ranges.
+
+3) Transitive VPC Peering – not allowed i.e
+
+(If VPC A & B have peered and VPC A & C have peered, VPC B & C cannot share contents until there is an exclusive peering done between VPC B & C)
+
+Q) Will VPC Peering Cost me?
+A) No. VPC itself won’t cost you, however, 
+ the resources deployed inside the VPC and data transfers 
+ are done will cost you.
+
+-----------------------------------------------------
+Let’s create VPC Peering to enable communication
+To establish the connection, lets create VPC peering
+=> On the left navigation panel under VPC -> Peering Connections:
+
+VPC (Requester) = raghutest_aws_custom_vpc
+VPC (Accepter) = default_vpc
+
+=> Now you would see the status Pending Acceptance which means, Requestor has sent a request to the peer now target VPC needs to accept the request.
+
+=> Go to VPC Peering -> Click on Actions -> Accept Request
+
+=> Now we need to make entries in Route Tables
+
+Now navigate to Route Tables, in Default VPC RT(Route Table) -> Edit routes
+
+##########  Default VPC Route Table should have 3 routes #########
+(Local + all traffic with IGW + raghutest_aws_custom_vpc IP Range)
+
+172.31.0.0/16 - local
+0.0.0.0/0 - Internet-gateway
+10.0.0.0/16 - vpc peering  (We need to add this)
+
+########### Custom VPC Route Table should have 3 routes #########
+(Local + All traffic with IGW + Default VPC IP Range)
+
+10.0.0.0/16 - local
+0.0.0.0/0 - Internet-gateway
+172.31.0.0/16 - vpc  (We need to add this)
+
+########### Allow Traffic in VPC Security Groups ###########
+
+Edit Security Group of Default and Custom VPC to allow traffic from each other
+
+Default VPC Security Group looks like
+SSH - 22 - all 
+HTTP - 80 - all 
+
+Custom VPC Security Group would look like
+SSH - 22 - all 
+HTTP - 80 - all 
+
+## Create EC2 instance under Customer VPC with below user data script ###########
+
+sudo yum update -y
+sudo yum install -y httpd.x86_64
+sudo  systemctl start httpd.service
+sudo  systemctl enable httpd.service
+echo "Hello world from $(hostname -f)" > /var/www/html/index.html
+
+# Create EC2 instance under Default VPC with below user data script ###########
+
+sudo yum update -y
+sudo yum install -y httpd.x86_64
+sudo  systemctl start httpd.service
+sudo  systemctl enable httpd.service
+echo "Hello world from $(hostname -f)" > /var/www/html/index.html
+
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-===Test VPC Peering Connectivity -=-=-=-=-=-=-=-=-=-=-=-=-=-===
+
+# Access Webserver that is available in Custom VPC from Default-vpc-ec2-instance with below command
+$ curl <private-ip>
+
+Note: We should get response
+
+# Access Webserver that is available in Default VPC from Custom-vpc-ec2-instance with below command
+$ curl <private-ip>
+
+Note: We should get response
+
