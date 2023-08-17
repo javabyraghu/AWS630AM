@@ -1,0 +1,70 @@
+
+
+Date : 17-08-2023
+AWS Cloud
+Mr. RAGHU (AshokIT)
+---------------------------
+AWS VPC
+1. VPC - CIDR
+2. Subnet (Public / Private)
+   1 Subnet -- recomanded to be created in 1 AZe.
+3. Route table 
+ CIDR Details
+ local -- 10.0.0.0/16
+ IGW   -- 0.0.0.0/0
+ Peering -- 172.168.0.0/16
+4. Network ACL (Access Control List)
+   Inbound / Outbound Firewall for Subnet
+   Allow Rules / Deny Rules
+   Multiple Rule in Order (lowest number -- highest Priority)
+5. Security Group for Instances.
+   Allow Rules (Protocol, Source)
+6. IGW - Internet gateway
+  1 IGW -- 1 VPC
+==============================================================
+Q) How can we SSH into EC2 Instance Present in Private Subnet?
+   (Even PublicIP may or may not present).
+
+A) We can not directly SSH into Private Subnet Instances.
+   We need to create one Instance in Public Subnet, that will connect
+   to private Subnet Instances.
+   Such Instance is called as Bastion Host / Jum Box / Jump Server.
+
+-> Create EC2 in Public Subnet and EC2 in Private Subnet.
+-> Connect to Public Subnet Instance and execute below commands
+(First Upload Pem file in MobaXterm after SSH Connection)
+    1  ls -la
+    2  chmod 400 AWS.pem  / chown ec2-user:ec2-user AWS.pem
+    3  ls -la
+    4  ssh -i AWS.pem ec2-user@<PrivateSubnetEC2PrivateIP>
+    5  ls
+    6  exit
+=================================================================
+Requirement:
+1. Create Instance in Private Subnet
+2. ** Do not allow Internet Access to EC2 Instance (Never add IGW)
+3. But sometimes required Outbound data for Private Subnet Instances
+ Ex: OS updates, S/w Install.
+
+https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html
+NAT Gateway is used to connect Private Subnet Instances with Internet
+Only for Outbound data/ download data from outside.
+but External/Outside services can not access our instances.
+
+NAT must be created in Public Subnet.
+NAT must be registered with Private Subnet Route table.
+ like 0.0.0.0/0 --- nat-0045756467
+
+
+Follow these steps:
+1. First Remove Entry from Private Route table (NAT GW Entry)
+2. Delete NAT GW
+3. Release Elastic IP
+4. Terminate EC2 Instances
+5. Edit Route table Subnet Associations and then delete
+6. Delete VPC.
+
+Used for 4 Hours = 0.224 $
+Data Trfs. 2 GB  = 0.112 $
+
+===============================================
