@@ -1,0 +1,15 @@
+
+
+Date : 18-08-2023
+AWS Cloud
+Mr. Raghu (AshokIT)
+--------------------
+SMTP : Simple Mail Transfer Protocol
+Amazon Simple Email Service (SES) 
+
+Required SMTP user
+1. IAM User with SES Policies.
+2. Access Key and Secret key
+3. SMTP Provider HOST
+4. SMTP Provider Port
+5. Domain/User (Verified List only)
