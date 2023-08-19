@@ -1,0 +1,17 @@
+
+
+Date : 19-08-2023
+AWS Cloud
+Mr. Raghu (AshokIT)
+------------------------------
+Website / Web Application
+-> Static App : 
+  i. Deploy using S3 (Recomanded)
+  ii. Use EC2 Instance, HTTPD / Apache2 Server, Run App.
+-> Dynamic App: (Implemented using Programming Language)
+  Web App content is getting updated based time/location/user.
+  Implemented using Java, .Net, Python ..etc.
+
+ Elastic Beanstalk creates required Application runtime/Environment.
+ (Automated creation/ No Manual Creation of Resources).
+=================================================================
