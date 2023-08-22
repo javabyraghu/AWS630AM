@@ -1,0 +1,15 @@
+
+
+Date: 22-08-2023
+AWS Cloud
+-------------------------
+AWS Lambda :
+-> it is Serverless (Server is managed by cloud, based on runtime/programming language)
+-> it supports event-driven
+-> Short span works
+-> ex: batch process, IoT, ML, Image Processing..etc
+-> Uses one Programming Language.
+-> Lambda is a like a Mediator.
+-> it is called as functional programming.
+
+-> Lambda bill is generated based on no.of request / code execution time
