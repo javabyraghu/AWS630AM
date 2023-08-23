@@ -1,0 +1,23 @@
+
+
+Date : 23-08-2023
+AWS Cloud 
+Mr. Raghu (AshokIT)
+-----------------------------------
+Manual Process - creation of Resources
+-> Goto AWS Console -> Choose serivce -> Provide parameters -> Create.
+
+IaC - Infrastructure as Code
+Automate creation of Resources 
+
+Code - Ec2 - RDS - File (Git) v1.0
+Code - Ec2 - RDS + DynamoDB - File (Git) v1.1
+
+Ex: ec2.setup
+-------------
+ami-id:
+instance-name:
+type:
+
+
+Stack - EC2 , DynamoDB ... Resources
