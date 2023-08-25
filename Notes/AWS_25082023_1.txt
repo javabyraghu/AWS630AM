@@ -1,0 +1,15 @@
+
+
+Date : 25-08-2023
+AWS Cloud
+Mr. Raghu (AshokIT)
+-----------------------
+AWS CloudWatch (Moniter and Logging Tool)
+
+---------------------------------------
+What is IP address, Network?
+What is Domain?
+What is DNS?
+What is Routing?
+What is DNS Records?
+
