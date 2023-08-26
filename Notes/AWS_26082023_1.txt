@@ -1,0 +1,19 @@
+
+
+Date: 26-08-2023
+AWS Cloud
+Mr. Raghu (AshokIT)
+----------------------
+AWS Route 53
+-> DNS Server given by AWS Cloud.
+-> Purchase, Configure and Manage Domains (Hosted Zones).
+
+-----What is DNS and Why it is----------
+1. We runs apps using EC2 Instance and setup(Tomcat Server, WAR file..etc)
+ [at least one EC2 Instance]
+
+2. IPs are not fixed in realtime. Not easy to remember even.
+
+3. In case multiple Instances are running for application high availability,
+   then we use load balancer.
+
