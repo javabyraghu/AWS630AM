@@ -1,0 +1,33 @@
+
+
+Date : 28-08-2023
+AWS Cloud 
+Mr. Raghu (AshokIT)
+-----------------------
+IaC : Infrastructure as Code
+
+Automate Creating Environment to run applications
+
+Cloud Automation: Terraform (AWS, GCP, Azure, ..etc)
+------------------------------------------------------
+HCL HashiCorp Configuration Language (HCL) 
+(Looks like JSON Formation)
+
+resource "Provider"  "name" {
+   key = value
+}
+
+https://registry.terraform.io/browse/providers
+
+provider "aws" {
+  region = ""
+
+}
+
+resource "aws_instance" "myinstance" {
+	attribute = value
+}
+
+Downloads:
+https://developer.hashicorp.com/terraform/downloads?product_intent=terraform
+
