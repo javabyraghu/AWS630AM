@@ -1,0 +1,25 @@
+
+
+Date: 30-08-2023
+AWS Cloud
+Mr. Raghu (AshokIT)
+-------------------------------
+Terraform Setup in MAC
+> brew tap hashicorp/tap
+> brew install hashicorp/tap/terraform
+> terraform -version
+
+Terraform Setup in Windows
+S#1 Goto https://developer.hashicorp.com/terraform/downloads
+S#2 Choose Windows tab
+S#3 Click on Download (386 option) 
+S#4 Extract to a folder
+S#5 Set Path 
+S#6 Test using command  
+	> terraform -version
+
+Ref#1:
+https://github.com/javabyraghu/terraform_examples
+
+Ref#2:
+https://registry.terraform.io/modules/terraform-aws-modules/ec2-instance/aws/latest
