@@ -1,0 +1,25 @@
+
+Date : 31-08-2023
+AWS Cloud 
+Mr. Raghu (AshokIT)
+--------------------
+IAM User --> Policies 
+
+HardCoding:
+Provide a direct value to a variable/attributes inside main code.
+
+TF variables:
+Stage#1 Define them (name, type, description, default value)
+Stage#2 Provide values ( name = value)
+Stage#3 To access a variable inside your resource file
+	use Syntax: var.VariableName
+
+
+** Keep main.tf config as it is. Just define multiple .tfvars file
+while apply command choose/select .tfvars file.
+
+Setup#1
+  terraform apply -var-file="devproject.tfvars"
+
+Setup#2
+  terraform apply -var-file="uatproject.tfvars"
