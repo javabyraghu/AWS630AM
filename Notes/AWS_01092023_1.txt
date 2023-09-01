@@ -1,0 +1,19 @@
+
+
+Date : 01-09-2023
+AWS Cloud
+Mr. Raghu (AshokIT)
+--------------------------------
+> Terraform : IaC
+> Multiple - Cloud Configuration [AWS, GCP, Azure ..etc]
+> HCL - HashiCorp Configuration Language
+> Provider, Resources, variables, outputs ..etc
+> File extension is .tf , for variables .tfvars
+> Variables(holds values, creates re-usable templates)
+=======================================================
+Module: 
+> Re-usable
+> Individual Folders
+> Easy to find issues/bugs
+> Complex Configuration into small parts
+
