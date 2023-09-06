@@ -1,0 +1,85 @@
+
+Date : 06-09-2023
+AWS Cloud
+Mr. Raghu (AshokIT)
+-------------------
+
+--first.sh---
+#!/bin/bash
+
+ls
+pwd
+date
+time
+
+echo ""
+read variable  <--- data
+
+Operations + - * / % > <
+
+Arrays (one variable holds multiple value in sequence order)
+marks[0]=25
+marks[1]=30
+============================================================
+function : block of statements / set of instructions / re-usable
+
+//creating function
+function name() {
+  //statements //$1  $2  ...etc inputs
+}
+
+//using function //calling function
+name <Parameters> 
+
+function_output=$?  //output
+
+
+Ex#1
+#!/bin/bash
+
+
+function sum()
+{
+        c=$(( $1 + $2 ))
+        return $c
+}
+
+sum 10 20
+result=$?
+echo "Result is $result"
+
+Ex#2
+#!/bin/bash
+
+
+function message()
+{
+        echo "welcome to function"
+        echo "bye!"
+}
+
+message
+message
+message
+
+========================================
+function one() {
+
+  two //function call
+}
+
+function two() {
+
+}
+
+one //function call
+
+=====================================================
+AWS CLI Commands
+
+--awsclisetupec2.sh------
+-----
+-----
+-----
+------------------------
+
