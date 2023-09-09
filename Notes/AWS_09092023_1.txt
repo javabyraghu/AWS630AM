@@ -1,0 +1,100 @@
+
+Date : 09-09-2023
+Python Basics
+-------------------
+variables
+operations
+control statements
+loops
+function: Set of statements, re-usable, indicates a task.
+Ex: createUser, validateInput, fetchData ..etc
+
+1. Create function
+2. Invoke/call function
+
+Ex: Empty function
+
+def addNums():
+    pass
+-----------
+Ex#2 
+def addnums(x, y):
+    z = x + y
+    return z
+
+
+result = addnums(10, 20)
+print(f"Result is {result}")
+-----------
+Ex#3 function with default values
+
+def addnums(x=1, y=0):
+    z = x + y
+    return z
+
+
+#result = addnums() // ==> 1
+#result = addnums(10) //==> 10
+result = addnums(10,20) #//=> 30
+print(f"Result is {result}")
+---------------------------
+Ex#4 Passing multiple values to a variable
+
+def showmarks(*makrs):
+    for i in makrs:
+        print(f' Marks = {i}')
+
+
+showmarks(10, 55, 36, 48)
+
+
+class = variables + functions 
+Person = id, name, gender + printDetails, showData..etc
+
+Ex#5 OS Module example
+import os
+
+cwd = os.getcwd()
+
+print(cwd)
+
+Ref: https://docs.python.org/3/library/os.html
+===================================================
+Ex#6 Exception/Error Handling
+
+def show(x,y,z):
+    pass
+
+try:
+    show(10,20)
+    #print(x)
+except NameError:
+    print("Variable/function is not defined")
+except TypeError:
+    print("Execution issue")
+except:
+    print("Something is wrong")
+===========================================================
+AWS Concepts
+1. EC2 : Virtual machines (using EBS, ASG, LB, TG, Elastic IP, AMI=os+s/w)
+2. S3  : Object storage (images, files, ..etc), buckets,
+3. RDS : Database (Relational), tables, rows, columns,..etc
+4. EFS : Shared File System, NFS, Multiple-EC2 instances ..etc
+5. VPC : Virtual Network using CIDR, Subnets, RouteTable, NACL, SG, NAT, IGW, Peering
+6. SQS, SES : Simple Queue, Email 
+7. Lambda : Functional Programming, Serverless, 
+8. Beanstalk: Creates Web application Resources Setup.
+9. DynamoDB: NoSQL Database. 
+10. IAM : Users, Groups, Permission/Policies, Roles ..etc
+11. CloudWatch: Moniter, Alarm, Logs, 
+12. CloudFormation:(IaC) Automate Cloud Confiration/Creation.[JSON/YAML]
+13. Route 53 : DNS Service. (IP->Domain), Hosted Zones, LBS, Lamda, EC2
+14. Terraform: IaC , Automates any cloud. .tf files, variables..etc
+
+===============================================================
+1.
+AWS Skill Builder (https://explore.skillbuilder.aws/learn/course/external/view/elearning/134/aws-cloud-practitioner-essentials?dt=tile&tile=fdt )
+2.
+AWS-Certified-Cloud-Practitioner PDF Free Download | Amazon Dumps PDF (downloadfreepdf.net)
+3.
+https://www.awslagi.com/aws-certified-cloud-practitioner/
